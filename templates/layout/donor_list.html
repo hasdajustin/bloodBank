@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Donor List
+{% endblock title %}
+
+{% block content %}
+<div class="container py-5">
+    <h2 class="text-center mb-4">
+        <i class="fa-solid fa-users text-danger"></i> Available Donors
+    </h2>
+
+    {% if donors %}
+    <div class="table-responsive">
+        <table class="table table-striped table-hover align-middle text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Blood Group</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for donor in donors %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ donor.full_name }}</td>
+                    <td>{{ donor.email }}</td>
+                    <td>{{ donor.phone }}</td>
+                    <td><span class="badge bg-danger">{{ donor.blood_group }}</span></td>
+                    <td>{{ donor.address }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <p class="text-center text-muted">No donors registered yet.</p>
+    {% endif %}
+</div>
+{% endblock content %}
