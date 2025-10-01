@@ -1,0 +1,35 @@
+:root {
+    --primary-color: #ff0000;
+    --secondary-color: #000000;
+    --white: white;
+}
+
+.home_container h1 span {
+    color: var(--primary-color) !important;
+}
+
+.home_container h6 {
+    color: var(--primary-color) !important;
+}
+
+.home_container .card h3 span {
+    color: var(--primary-color) !important;
+}
+
+.home_container .home_btn a {
+    transition: all 0.3s ease-in-out !important;
+}
+
+.home_container .home_btn a:hover {
+    border: 1px solid var(--primary-color) !important;
+    background-color: var(--primary-color) !important;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.58)!important;
+}
+
+.home_container .card {
+    transition: all 0.3s ease-in-out !important;
+}
+
+.home_container .card:hover {
+    box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, 0.58)!important;
+}

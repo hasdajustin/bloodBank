@@ -6,30 +6,32 @@ Home
 {% endblock title %}
 
 {% block content %}
-<div class="container d-flex flex-column justify-content-center align-items-center min-vh-100 text-center">
-    <h1>Welcome to Blood Bank</h1>
-    <p id="quote">Loading quote...</p>
+<div class="home_container">
+    <div class="container d-flex flex-column justify-content-center align-items-center min-vh-100 text-center">
+        <h1>Welcome to <span>Blood Bank<i class="fa-solid fa-droplet"></i></span></h1>
+        <h6 id="quote" class="text-uppercase mb-4">Loading quote...</h6>
 
-    <div class="row mt-4 w-100 justify-content-center">
-        <div class="col-md-5 mb-3">
-            <div class="card shadow-lg rounded-3 h-100">
-                <div class="card-body d-flex flex-column">
-                    <h3>Become a Donor</h3>
-                    <p>Register yourself as a blood donor and save lives.</p>
-                    <div class="mt-auto">
-                        <a href="#" class="btn btn-primary">Register</a>
+        <div class="row w-100 justify-content-center">
+            <div class="col-md-5 mb-3">
+                <div class="card shadow rounded-3 h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h3>Become a <span>Donor</span></h3>
+                        <p>Register yourself as a blood donor and save lives.</p>
+                        <div class="mt-auto home_btn">
+                            <a href="#" class="btn btn-sm btn-outline-dark px-5">Register</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-md-5 mb-3">
-            <div class="card shadow-lg rounded-3 h-100">
-                <div class="card-body d-flex flex-column">
-                    <h3>Find a Donor</h3>
-                    <p>Search donors by blood group for your patients.</p>
-                    <div class="mt-auto">
-                        <a href="#" class="btn btn-success">Search</a>
+            <div class="col-md-5 mb-3">
+                <div class="card shadow rounded-3 h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h3>Find a <span>Donor</span></h3>
+                        <p>Search donors by blood group for your patients.</p>
+                        <div class="mt-auto home_btn">
+                            <a href="#" class="btn btn-sm btn-outline-dark px-5">Search</a>
+                        </div>
                     </div>
                 </div>
             </div>
