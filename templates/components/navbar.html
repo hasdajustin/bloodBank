@@ -1,0 +1,42 @@
+<nav class="navbar bg-light fixed-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-danger" href="{% url 'home' %}">
+            Blood Bank<i class="fa-solid fa-droplet me-1"></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title text-danger">
+                    <i class="fa-solid fa-bars me-2"></i> Menu
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}"
+                            href="{% url 'home' %}">
+                            <i class="fa-solid fa-house me-1"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'register' %}active{% endif %}"
+                            href="{% url 'register' %}">
+                            <i class="fa-solid fa-user-plus me-1"></i> Register Donor
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'donor' %}active{% endif %}"
+                            href="{% url 'donor' %}">
+                            <i class="fa-solid fa-users me-1"></i> Donor List
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

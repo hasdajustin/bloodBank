@@ -5,8 +5,12 @@
 Donor List
 {% endblock title %}
 
+{% block navbar %}
+{% include 'components/navbar.html' %}
+{% endblock navbar %}
+
 {% block content %}
-<div class="container py-5">
+<div class="container mt-5 py-5">
 
     <!-- Search Section -->
     <div class="card shadow-lg rounded-4 mb-5">
@@ -115,3 +119,7 @@ Donor List
     {% endif %}
 </div>
 {% endblock content %}
+
+{% block footer %}
+{% include 'components/footer.html' %}
+{% endblock footer %}

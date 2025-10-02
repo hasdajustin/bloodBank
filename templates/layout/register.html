@@ -5,8 +5,12 @@
 Donor Registration
 {% endblock title %}
 
+{% block navbar %}
+{% include 'components/navbar.html' %}
+{% endblock navbar %}
+
 {% block content %}
-<div class="container d-flex justify-content-center align-items-center min-vh-100">
+<div class="container d-flex justify-content-center align-items-center min-vh-100 m-5">
     <div class="col-md-8">
         <div class="card shadow-lg rounded-4">
             <div class="card-body p-4">
@@ -92,3 +96,7 @@ Donor Registration
     </div>
 </div>
 {% endblock content %}
+
+{% block footer %}
+{% include 'components/footer.html' %}
+{% endblock footer %}
