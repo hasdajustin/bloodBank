@@ -2,48 +2,51 @@
 {% load static %}
 
 {% block title %}
-Register Donor
+Donor Registration
 {% endblock title %}
 
 {% block content %}
-<div class="container d-flex flex-column justify-content-center align-items-center min-vh-100">
-    <div class="col-md-6">
-        <div class="card shadow rounded-3">
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="col-md-8">
+        <div class="card shadow-lg rounded-4">
             <div class="card-body p-4">
-                <h2 class="text-center mb-4">
-                    <i class="fa-solid fa-user-plus text-danger"></i> Donor Registration
-                </h2>
+                <h3 class="text-center mb-4">
+                    <i class="fa-solid fa-user-plus text-danger me-2"></i> Donor Registration
+                </h3>
 
-                <!-- Registration Form -->
-                <form method="post">
+                <form class="row g-3" method="post">
                     {% csrf_token %}
 
                     <!-- Full Name -->
-                    <div class="mb-3">
-                        <label for="full_name" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="full_name" name="full_name"
-                            placeholder="Enter your full name" required>
+                    <div class="col-md-6">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" name="full_name"
+                               placeholder="Enter your full name" required>
                     </div>
 
-                    <!-- Email -->
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email"
-                            required>
+                    <!-- Age -->
+                    <div class="col-md-6">
+                        <label for="age" class="form-label">Age</label>
+                        <input type="number" class="form-control" id="age" name="age"
+                               placeholder="Enter your age" min="18" max="65" required>
                     </div>
 
-                    <!-- Phone -->
-                    <div class="mb-3">
-                        <label for="phone" class="form-label">Phone Number</label>
-                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone"
-                            required>
+                    <!-- Gender -->
+                    <div class="col-md-6">
+                        <label class="form-label">Gender</label>
+                        <select class="form-select" name="gender" required>
+                            <option selected disabled>Choose...</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
                     </div>
 
                     <!-- Blood Group -->
-                    <div class="mb-3">
-                        <label for="blood_group" class="form-label">Blood Group</label>
-                        <select class="form-select" id="blood_group" name="blood_group" required>
-                            <option value="" disabled selected>Select your blood group</option>
+                    <div class="col-md-6">
+                        <label for="bloodGroup" class="form-label">Blood Group</label>
+                        <select id="bloodGroup" class="form-select" name="blood_group" required>
+                            <option selected disabled>Choose...</option>
                             <option>A+</option>
                             <option>A-</option>
                             <option>B+</option>
@@ -56,17 +59,34 @@ Register Donor
                     </div>
 
                     <!-- Address -->
-                    <div class="mb-3">
+                    <div class="col-12">
                         <label for="address" class="form-label">Address</label>
-                        <textarea class="form-control" id="address" name="address" rows="2"
-                            placeholder="Enter your address"></textarea>
+                        <textarea class="form-control" id="address" name="address"
+                                  placeholder="Enter your full address" rows="2" required></textarea>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="tel" class="form-control" id="phone" name="phone"
+                               placeholder="01XXXXXXXXX" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email"
+                               placeholder="Enter your email" required>
                     </div>
 
                     <!-- Submit -->
-                    <div class="d-grid">
-                        <button type="submit" class="btn btn-danger">Register</button>
+                    <div class="col-12 d-flex justify-content-center mt-3">
+                        <button type="submit" class="btn btn-danger px-5 py-2">
+                            <i class="fa-solid fa-droplet me-1"></i> Register
+                        </button>
                     </div>
                 </form>
+
             </div>
         </div>
     </div>
