@@ -5,6 +5,17 @@ This project allows users to **register as a blood donor** and lets others **sea
 
 ---
 
+### Home Page
+![Home Page](screenshots/home.png)
+### Donor Registration
+![Donor Registration](screenshots/register.png)
+### Donor List
+![Donor List](screenshots/donor_list.png)
+### Donor Details 
+![Donor Details](screenshots/donor_details.png)
+
+---
+
 ## Features
 - **Donor Registration**
 
@@ -30,12 +41,3 @@ This project allows users to **register as a blood donor** and lets others **sea
 - **Icons**: Font Awesome
 
 ---
-
-### Home Page
-![Home Page](screenshots/home.png)
-### Donor Registration
-![Donor Registration](screenshots/register.png)
-### Donor List
-![Donor List](screenshots/donor_list.png)
-### Donor Details 
-![Donor Details](screenshots/donor_details.png)
