@@ -32,5 +32,24 @@ def register_view(request):
         return redirect("donor")
     return render(request, 'layout/register.html')
 
+from django.shortcuts import render
+from .models import Donor
+
 def donor_view(request):
-    return render(request, 'layout/donor_list.html')
+    donors = Donor.objects.all()
+
+    blood_group = request.GET.get('blood_group')
+    area = request.GET.get('area')
+
+    if blood_group and blood_group != "":
+        donors = donors.filter(blood_group=blood_group)
+
+    if area and area != "":
+        donors = donors.filter(address__icontains=area)
+
+    context = {
+        "donors": donors,
+        "selected_blood_group": blood_group,
+        "entered_area": area,
+    }
+    return render(request, 'layout/donor_list.html', context)
